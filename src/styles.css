@@ -1,0 +1,218 @@
+/* General styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(
+    135deg,
+    #f1f1f1,
+    #e0e0e0
+  ); /* Light gradient background */
+  color: #333;
+}
+
+/* Container setup */
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Header styling with multi-color gradient */
+.header {
+  background: linear-gradient(
+    135deg,
+    #ff5f6d,
+    #ffc3a0,
+    #ff9a8b
+  ); /* Vibrant 3-color gradient */
+  color: white;
+  padding: 60px 0;
+  text-align: center;
+  border-bottom: 5px solid #e05c5b; /* Darker shade to frame the header */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  animation: popUp 1s forwards;
+  transition: background 0.3s ease; /* Smooth transition on background color change */
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 3.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header h5 {
+  font-size: 1.4rem;
+  margin: 10px 0;
+}
+
+.header p {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Section styling with radial gradient */
+.section {
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.8) 60%,
+    rgba(245, 245, 245, 0.7) 100%
+  ); /* Radial gradient for softer look */
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  padding: 30px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease,
+    background 0.3s ease;
+  opacity: 0;
+  animation: popUp 1.5s forwards;
+  animation-delay: 0.5s;
+}
+
+.section:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.9) 60%,
+    rgba(255, 245, 245, 0.8) 100%
+  ); /* Change background on hover */
+}
+
+.section h2 {
+  font-size: 2.4rem;
+  color: #4e73df;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #4e73df;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Contact form styling with gradient button */
+.contact .form-group {
+  margin-bottom: 20px;
+}
+
+.contact .form-control {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.contact .form-control:focus {
+  border-color: #ff5f6d;
+  background-color: #fff0f0;
+}
+
+.contact button {
+  background: linear-gradient(
+    45deg,
+    #ff5f6d,
+    #ff9a8b,
+    #ffcc99
+  ); /* Complex angled gradient */
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth transitions */
+  opacity: 0;
+  animation: popUp 1s forwards;
+  animation-delay: 1s;
+}
+
+.contact button:hover {
+  background: linear-gradient(
+    45deg,
+    #ff9a8b,
+    #ff5f6d,
+    #ffcc99
+  ); /* Reversed gradient effect */
+  transform: scale(1.05); /* Slightly grow the button on hover */
+}
+
+/* Footer Styling with vibrant gradient */
+.footer {
+  background: linear-gradient(
+    135deg,
+    #ff5f6d,
+    #ffc3a0,
+    #ff9a8b
+  ); /* Matching vibrant gradient from header */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  animation: popUp 1s forwards;
+  animation-delay: 1.5s;
+  transition: background 0.3s ease; /* Smooth transition on background color change */
+}
+
+.footer p {
+  margin: 0;
+  font-weight: bold;
+}
+
+/* Hover effect for footer */
+.footer:hover {
+  background: linear-gradient(
+    135deg,
+    #ff9a8b,
+    #ffc3a0,
+    #ff5f6d
+  ); /* Reverse gradient effect */
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+  .header h1 {
+    font-size: 2.2rem;
+  }
+
+  .header h5 {
+    font-size: 1.2rem;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .contact button {
+    width: 100%;
+  }
+}
